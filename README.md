@@ -117,7 +117,9 @@ npm run dev
     "message": "API creation completed",
     "successful": 8,
     "failed": 2,
-    "details": [...]
+    "batches": 1,
+    "batchSize": 100,
+    "results": [...]
   }
   ```
 
