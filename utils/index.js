@@ -122,7 +122,7 @@ export const generateCreationPayloads = (count) => {
       } API for ${companyName} providing ${faker.hacker.phrase()}.`,
       context: context,
       version: version,
-      provider: "admin",
+      provider: process.env.APIM_ADMIN_USERNAME || "admin",
       lifeCycleStatus: "CREATED",
       responseCachingEnabled: faker.datatype.boolean(),
       hasThumbnail: false,

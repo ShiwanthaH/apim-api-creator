@@ -1,15 +1,15 @@
 export const DCR_AUTH_PAYLOAD = {
   callbackUrl: "www.google.lk",
   clientName: "rest_api_publisher",
-  owner: "admin",
+  owner: process.env.APIM_ADMIN_USERNAME || "admin",
   grantType: "client_credentials password refresh_token",
   saasApp: true,
 };
 
 export const TOKEN_PAYLOAD = {
   grant_type: "password",
-  username: "admin",
-  password: "admin",
+  username: process.env.APIM_ADMIN_USERNAME || "admin",
+  password: process.env.APIM_ADMIN_PASSWORD || "admin",
   scope: "apim:api_create apim:api_publish apim:api_view",
 };
 
